@@ -6,7 +6,6 @@ License:	GPL
 Group:		File tools
 URL:		http://utrac.sourceforge.net/
 Source0:	http://utrac.sourceforge.net/download/utrac-0.3.0.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 UTRAC stands for Universal Text Recognizer and Converter. It is a
