@@ -1,7 +1,7 @@
 Summary:	Universal Text Recognizer and Converter
 Name:		utrac
 Version:	0.3.0
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPL
 Group:		File tools
 URL:		http://utrac.sourceforge.net/
