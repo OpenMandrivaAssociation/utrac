@@ -1,0 +1,43 @@
+diff -Naur utrac-0.3.0/utrac.h utrac-0.3.0.oden/utrac.h
+--- utrac-0.3.0/utrac.h	2005-02-25 18:07:49.000000000 +0100
++++ utrac-0.3.0.oden/utrac.h	2008-09-13 16:44:23.000000000 +0200
+@@ -40,6 +40,7 @@
+ 
+ //#include "debug.h"
+ #include <sys/types.h>
++#include <stdint.h>
+ #include "ut_error.h"
+ #include "ut_text.h"
+ #include "ut_charset.h"
+@@ -184,7 +185,7 @@
+ 
+ bool ut_update_progress (struct UtText *, ulong, bool);
+ 
+-ulong ut_crc32 (ushort , ulong);
++uint32_t ut_crc32 (unsigned short , uint32_t);
+ 
+ void ut_print_binary (ulong src);
+ UtCode ut_debug_text (struct UtText *);
+diff -Naur utrac-0.3.0/ut_utils.c utrac-0.3.0.oden/ut_utils.c
+--- utrac-0.3.0/ut_utils.c	2005-02-22 18:00:39.000000000 +0100
++++ utrac-0.3.0.oden/ut_utils.c	2008-09-13 16:42:12.000000000 +0200
+@@ -34,6 +34,8 @@
+ #include <fcntl.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <stdint.h>
++#include <unistd.h>
+ #include <limits.h> //for SSIZE_MAX
+ 
+ #include <endian.h>
+@@ -363,8 +365,8 @@
+  *       of several of the popular FDDI "MAC" chips.
+  */
+ 
+-ulong ut_crc32(ushort data, ulong crc_in) {
+-	ulong  crc;
++uint32_t ut_crc32(unsigned short data, uint32_t crc_in) {
++	uint32_t crc;
+ 
+ 	if (!ut_crc32_table[1]) {
+ 		int i, j; ulong c;
