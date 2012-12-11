@@ -48,3 +48,35 @@ rm -rf %{buildroot}
 %attr(0755,root,root) %{_bindir}/utrac
 %attr(0644,root,root) %{_datadir}/utrac/charsets.dat
 %attr(0644,root,root) %{_mandir}/man1/*
+
+
+%changelog
+* Wed Sep 09 2009 Thierry Vignaud <tvignaud@mandriva.com> 0.3.0-6mdv2010.0
++ Revision: 434623
+- rebuild
+
+* Sat Sep 13 2008 Oden Eriksson <oeriksson@mandriva.com> 0.3.0-5mdv2009.0
++ Revision: 284528
+- fix #35379 (utrac segmentation fault)
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.3.0-3mdv2009.0
++ Revision: 255274
+- rebuild
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 0.3.0-1mdv2008.1
++ Revision: 140925
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+    - import utrac
+
+
+* Tue Sep 12 2006 Oden Eriksson <oeriksson@mandriva.com> 0.3.0-1mdv2007.0
+- rebuild
+
+* Thu Jul 21 2005 Oden Eriksson <oeriksson@mandriva.com> 0.3.0-1mdk
+- initial Mandriva package
