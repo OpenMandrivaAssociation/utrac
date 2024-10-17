@@ -4,7 +4,7 @@ Version:	0.3.0
 Release:	7
 License:	GPL
 Group:		File tools
-URL:		http://utrac.sourceforge.net/
+URL:		https://utrac.sourceforge.net/
 Source0:	http://utrac.sourceforge.net/download/utrac-%{version}.tar.bz2
 Patch0:		utrac-fix-long-64bit.diff
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
