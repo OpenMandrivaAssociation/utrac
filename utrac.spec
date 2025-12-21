@@ -9,6 +9,7 @@ Source0:	http://utrac.sourceforge.net/download/utrac-%{version}.tar.bz2
 Patch0:		utrac-fix-long-64bit.diff
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
+BuildRequires:	make
 %description
 UTRAC stands for Universal Text Recognizer and Converter. It is a command line
 tool and a library that recognize the encoding of an input file (ex: UTF-8,
